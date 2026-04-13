@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light d-flex flex-column align-items-center justify-content-center vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-primary w-100 shadow-sm">
+        <div class="container-fluid justify-content-center">
+            <span class="navbar-brand mb-0 h4">🌤 Weather Dashboard</span>
+        </div>
+    </nav>
+
+    <!-- Card -->
+    <div class="container mt-4">
+        <div class="card shadow-lg border-0 rounded-4 p-4 mx-auto" style="max-width: 400px;">
+
+            <!-- Search -->
+            <div class="input-group mb-3">
+                <input type="text" placeholder="Enter city..." class="Inputbox form-control rounded-start">
+                <button id="searchbtn" class="btn btn-primary px-4">Search</button>
+            </div>
+
+            <div id="inputAlert" class="alert alert-danger py-2 d-none text-center"></div>
+            <div id="searchingAlert" class="alert alert-info py-2 d-none text-center">Searching...</div>
+
+            <!-- Error -->
+            <div class="Location text-center d-none">
+                <h6 class="text-danger">Location Not Found</h6>
+                <img src="404.png" class="img-fluid w-50">
+            </div>
+
+            <!-- Weather -->
+            <div class="weatherBody text-center">
+
+                <img src="cloud.png" class="weatehrImg img-fluid mb-3" style="width:100px;">
+
+                <div class="WeatherBox">
+                    <p class="Temperature display-5 fw-bold mb-0">0°</p>
+                    <p class="Description text-muted">Weather</p>
+                </div>
+
+                <!-- Details -->
+                <div class="row mt-4 text-center">
+
+                    <div class="col-6">
+                        <div class="p-3 bg-light rounded shadow-sm">
+                            <div>💧</div>
+                            <strong id="Humidity">0%</strong>
+                            <p class="hum small mb-0 text-muted">Humidity</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="p-3 bg-light rounded shadow-sm">
+                            <div>🌪️</div>
+                            <strong id="WindSpeed">0 Km/H</strong>
+                            <p class="wind small mb-0 text-muted">Wind Speed</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
