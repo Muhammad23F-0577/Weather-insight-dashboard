@@ -28,5 +28,3 @@ This project is a responsive Weather Dashboard web application built using HTML,
 4. Search history is updated for quick access.
 5. UI updates dynamically based on weather conditions.
 
-## Setup Instructions
-1. Clone the repository:
